@@ -150,7 +150,7 @@ export default function CartPage(): JSX.Element {
                 <h2 className="text-xl font-bold mb-4">Connect Your Wallet</h2>
 
                 {!isWalletConnected ? (
-                  <WalletConnectButton onConnect={handleWalletConnect} />
+                  <WalletConnectButton onConnect={handleWalletConnect} isConnected={isWalletConnected} />
                 ) : (
                   <p className="text-green-600 font-medium">Wallet Connected: {walletAddress}</p>
                 )}
